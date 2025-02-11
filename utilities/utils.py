@@ -31,3 +31,8 @@ def get_browser(browser_name):
         raise ValueError(f"Unsupported browser: {browser_name}")
 
 
+
+def read_config(section, key):
+    config = configparser.ConfigParser()
+    config.read(os.path.join(os.path.dirname(__file__), 'C:/Users/Adithya G/formyself/BoostUI/configuration/config.ini'))
+    return config.get(section, key)
