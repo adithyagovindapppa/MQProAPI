@@ -1,5 +1,4 @@
 
-
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -16,6 +15,7 @@ class LoginPage:
         self.forgot_password = "//*[@id='root']/div/div/form/button[1]"
         self.forgot_text = "//*[@id='root']/div/div/form/h2"
         self.back_button = "//*[@id='root']/div/div/form/button[1]"
+
 
     def enter_email(self, username):
         self.driver.find_element(By.ID, self.email_field).send_keys(username)
@@ -59,3 +59,4 @@ class LoginPage:
 
     def click_backbutton(self):
         self.driver.find_element(By.XPATH, self.back_button).click()
+

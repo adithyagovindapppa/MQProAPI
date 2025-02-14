@@ -76,9 +76,6 @@ def test_empty_username(driver):
     assert error_message is not None, "Error message should be displayed for empty username."
 
 
-
-
-
 def test_special_character_email_button_enabled(driver):
     base_url = config.get('WEB', 'base_url')
     special_email = config.get('CREDENTIALS', 'specialcharemail')
@@ -91,4 +88,3 @@ def test_special_character_email_button_enabled(driver):
     login_page.enter_password(valid_password)
     error_message = login_page.is_sign_button_enabled()
     assert error_message is not None, "Sign button should be disabled when email and password are empty"
-
