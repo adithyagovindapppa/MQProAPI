@@ -6,8 +6,8 @@ from pageObject.dashboard import DashboardPage
 # Initialize the logger and configuration
 logger = setup_logger()
 config = get_config()
-##
-##
+###
+###
 @pytest.fixture(scope="function")
 def driver():
     # Read the browser name from the [WEB] section of config.ini
